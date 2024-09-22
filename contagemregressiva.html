@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva até 0</title>
+</head>
+<body>
+    <h1>Contagem Regressiva até 0</h1>
+    <input type="text" name="valor informado" id="v" placeholder="Digite um número">
+    <input type="button" value="Contar" onclick="contar()">
+    <p id="resultado"></p>
+
+    <script>
+        function contar() {
+            // Pegando o valor informado pelo usuário e convertendo para número
+            var valor = parseInt(document.getElementById('v').value);
+
+            // Verificar se o valor é válido (maior que zero)
+            if (isNaN(valor) || valor <= 0) {
+                document.getElementById("resultado").innerText = "Digite um número válido maior que zero";
+                return; // Para a execução se o valor não for válido
+            }
+
+            // Inicializando a variável de resultado
+            let resultado = '';
+
+            // Loop de contagem regressiva de valor até 0
+            for (let i = valor; i >= 0; i--) {
+                resultado += i + " "; // Concatenar os números com espaço
+            }
+
+            // Exibir o resultado na página
+            document.getElementById('resultado').innerText = resultado;
+        }
+    </script>
+</body>
+</html>
