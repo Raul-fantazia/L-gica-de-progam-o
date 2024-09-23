@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números dentro de um array</title>
+</head>
+<body>
+    <h1>Somando números dentro de um array</h1>
+    <input type="button" value="Somar" onclick="somar()">
+    <p id="resultado"></p>
+
+    <script>
+        let numeros = [10, 20, 30, 40, 50]; // Definindo o array com números
+        let soma = 0; // Iniciando a soma com 0
+
+        function somar() {
+            soma = 0; // Reiniciando a soma a cada clique
+            for (let i = 0; i < numeros.length; i++) {
+                soma += numeros[i]; // Somando os valores do array
+            }
+
+            // Exibindo o resultado na página
+            document.getElementById('resultado').innerText = "Soma: " + soma;
+        }
+    </script>
+</body>
+</html>
